@@ -6043,11 +6043,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repo\\PlatformService\\PlatformService.csproj",
+      "projectUniqueName": "D:\\Repo\\PlatformService\\PlatformService\\PlatformService.csproj",
       "projectName": "PlatformService",
-      "projectPath": "D:\\Repo\\PlatformService\\PlatformService.csproj",
+      "projectPath": "D:\\Repo\\PlatformService\\PlatformService\\PlatformService.csproj",
       "packagesPath": "C:\\Users\\saint\\.nuget\\packages\\",
-      "outputPath": "D:\\Repo\\PlatformService\\obj\\",
+      "outputPath": "D:\\Repo\\PlatformService\\PlatformService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\saint\\AppData\\Roaming\\NuGet\\NuGet.Config",
