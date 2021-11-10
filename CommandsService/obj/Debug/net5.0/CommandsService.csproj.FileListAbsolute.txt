@@ -37,3 +37,5 @@ D:\Repo\PlatformService\CommandsService\obj\Debug\net5.0\CommandsService.dll
 D:\Repo\PlatformService\CommandsService\obj\Debug\net5.0\ref\CommandsService.dll
 D:\Repo\PlatformService\CommandsService\obj\Debug\net5.0\CommandsService.pdb
 D:\Repo\PlatformService\CommandsService\obj\Debug\net5.0\CommandsService.genruntimeconfig.cache
+D:\Repo\PlatformService\CommandsService\bin\Debug\net5.0\appsettings.Production.json
+D:\Repo\PlatformService\CommandsService\bin\Debug\net5.0\RabbitMQ.Client.dll

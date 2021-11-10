@@ -19,7 +19,7 @@ namespace PlatformService.AsyncDataServices
             var factory = new ConnectionFactory()
             {
                 HostName = _configuration["RabbitMQHost"],
-                Port = int.Parse(_configuration["5672"])
+                Port = int.Parse(_configuration["RabbitMQPort"])
             };
             try
             {
@@ -30,14 +30,15 @@ namespace PlatformService.AsyncDataServices
 
                 _connection.ConnectionShutdown += RabbitMQ_ConnectionShutdown;
 
-                Console.WriteLine("--> Connected to Message Bus");
+                Console.WriteLine("--> Connected to MessageBus");
+
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"--> Could not connect to RabbitMQ: {ex.Message}");
+                Console.WriteLine($"--> Could not connect to the Message Bus: {ex.Message}");
             }
-
         }
+
         public void PublishNewPlatform(PlatformPublishedDto platformPublishedDto)
         {
             var message = JsonSerializer.Serialize(platformPublishedDto);
@@ -49,7 +50,7 @@ namespace PlatformService.AsyncDataServices
             }
             else
             {
-                Console.WriteLine("--> RabbitMQ Connection close, not sending message");
+                Console.WriteLine("--> RabbitMQ connectionis closed, not sending");
             }
         }
 
@@ -57,28 +58,26 @@ namespace PlatformService.AsyncDataServices
         {
             var body = Encoding.UTF8.GetBytes(message);
 
-            //public the message
             _channel.BasicPublish(exchange: "trigger",
-                                routingKey: "",
-                                basicProperties: null,
-                                body: body);
-
-            Console.WriteLine($"--> We have send {message}");
+                            routingKey: "",
+                            basicProperties: null,
+                            body: body);
+            Console.WriteLine($"--> We have sent {message}");
         }
 
         public void Dispose()
         {
-            Console.WriteLine($"--> Message Bus Dispose");
-
+            Console.WriteLine("MessageBus Disposed");
             if (_channel.IsOpen)
             {
                 _channel.Close();
                 _connection.Close();
             }
         }
+
         private void RabbitMQ_ConnectionShutdown(object sender, ShutdownEventArgs e)
         {
-            Console.WriteLine("--> RabbitMQ connection shutdown");
+            Console.WriteLine("--> RabbitMQ Connection Shutdown");
         }
     }
 }
