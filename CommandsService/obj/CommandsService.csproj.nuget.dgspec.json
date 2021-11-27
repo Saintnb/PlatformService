@@ -44,6 +44,20 @@
               "target": "Package",
               "version": "[8.1.1, )"
             },
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.19.1, )"
+            },
+            "Grpc.Net.Client": {
+              "target": "Package",
+              "version": "[2.40.0, )"
+            },
+            "Grpc.tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.41.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.11, )"

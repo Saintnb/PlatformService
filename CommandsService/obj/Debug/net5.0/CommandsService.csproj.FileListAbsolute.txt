@@ -39,3 +39,7 @@ D:\Repo\PlatformService\CommandsService\obj\Debug\net5.0\CommandsService.pdb
 D:\Repo\PlatformService\CommandsService\obj\Debug\net5.0\CommandsService.genruntimeconfig.cache
 D:\Repo\PlatformService\CommandsService\bin\Debug\net5.0\appsettings.Production.json
 D:\Repo\PlatformService\CommandsService\bin\Debug\net5.0\RabbitMQ.Client.dll
+D:\Repo\PlatformService\CommandsService\bin\Debug\net5.0\Google.Protobuf.dll
+D:\Repo\PlatformService\CommandsService\bin\Debug\net5.0\Grpc.Core.Api.dll
+D:\Repo\PlatformService\CommandsService\bin\Debug\net5.0\Grpc.Net.Client.dll
+D:\Repo\PlatformService\CommandsService\bin\Debug\net5.0\Grpc.Net.Common.dll
